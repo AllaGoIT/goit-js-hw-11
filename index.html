@@ -7,23 +7,27 @@
     <title>Homework 11</title>
     
     <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-8d922bbd.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-8c59ed88.js">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-1cd1f9d9.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-201a00bf.css">
   </head>
   <body>
     <div class="container">
-      <form class="form" autocomplete="off">
+      <form class="form">
         <input
           class="place-input"
           type="text"
-          name="input"
-          autofocus
+          name="guery"
+          required
           placeholder="Search images"
         />
         <button class="btn" type="submit">Search</button>
       </form>
       <div class="container-text">
         <li>
-          <a class="text-loading" href="Loading images, please wait..."
+          <a
+            class="text-loading is-hidden"
+            href="Loading images, please wait..."
             >Loading images, please wait...</a
           >
         </li>
@@ -31,4 +35,8 @@
     </div>
     
   </body>
+  <section class="gallery-list">
+    <ul class="gallery"></ul>
+    <div class="loader"></div>
+  </section>
 </html>
