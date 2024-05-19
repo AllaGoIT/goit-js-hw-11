@@ -9,19 +9,21 @@
   </head>
   <body>
     <div class="container">
-      <form class="form" autocomplete="off">
+      <form class="form">
         <input
           class="place-input"
           type="text"
-          name="input"
-          autofocus
+          name="guery"
+          required
           placeholder="Search images"
         />
         <button class="btn" type="submit">Search</button>
       </form>
       <div class="container-text">
         <li>
-          <a class="text-loading" href="Loading images, please wait..."
+          <a
+            class="text-loading is-hidden"
+            href="Loading images, please wait..."
             >Loading images, please wait...</a
           >
         </li>
@@ -29,4 +31,8 @@
     </div>
     <script type="module" src="./main.js"></script>
   </body>
+  <section class="gallery-list">
+    <ul class="gallery"></ul>
+    <div class="loader"></div>
+  </section>
 </html>
