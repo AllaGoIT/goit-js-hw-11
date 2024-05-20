@@ -16,28 +16,30 @@ export const createGalleryList = json => {
         const img = document.createElement("img");
         img.classList.add("gallery-image");
         img.src = item.webformatURL;
-        img.alt = item.tags;
+      img.alt = item.tags;
+      img.title = item.likes;
+      
      
-        const h1 = document.createElement("h1");
-        h1.classList.add("gallery-text1");
-        h1.href = item.likes;
+        // const h1 = document.createElement("h1");
+        // h1.classList.add("gallery-text1");
+        // h1.href = item.likes;
        
-        const h2 = document.createElement("h2");
-        h2.classList.add("gallery-text2");
-        h2.href = item.views;
+        // const h2 = document.createElement("h2");
+        // h2.classList.add("gallery-text2");
+        // h2.href = item.views;
 
-          const h3 = document.createElement("h3");
-        h3.classList.add("gallery-text3");
-        h3.href = item.comments;
+        //   const h3 = document.createElement("h3");
+        // h3.classList.add("gallery-text3");
+        // h3.href = item.comments;
 
-        const h4 = document.createElement("h4");
-        h4.classList.add("gallery-text4");
-        h4.href = item.downloads;
+        // const h4 = document.createElement("h4");
+        // h4.classList.add("gallery-text4");
+        // h4.href = item.downloads;
 
 
         li.appendChild(a);
         a.appendChild(img);
-        img.appendChild(h1, h2, h3, h4);
+        // img.appendChild(h1, h2, h3, h4);
 
         fragment.appendChild(li);
     });

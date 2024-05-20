@@ -22,21 +22,14 @@ function onSubmit(event) {
   event.target.reset();
   loadEl.style.visibility = "visible";
   loadEl.style.pointerEvents = "all";
-  //lightbox.refresh();
-  //galEl.remove();
-  //sessionStorage.clear();
-  // ul.gallery.remove();
-  // ul.gallery.reset();
-  //gallery.innerHTML = "";
   
   if (searchQuery) {
     fetchPhotosCats(searchQuery);
+  
+};
+const galEl = document.querySelector("ul.gallery");
+  galEl.innerHTML = "";
+ 
+  lightbox.refresh();
   }
-    
-}
-
-  // localStorage.removeItem("feedback-form-state");
-  //   dataEl.reset();
-  //   formData.email = "";
-  //   formData.message = "";
  
