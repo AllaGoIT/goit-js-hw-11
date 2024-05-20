@@ -47,17 +47,3 @@ export const fetchPhotosCats = (query = "cat") => {
       console.log(error);
     });
 };
-
-  // key — твій унікальний ключ доступу до API.
-// q — слово для пошуку. Те, що буде вводити користувач.
-// image_type — тип зображення. Потрібні тільки фотографії, тому постав значення photo.
-// orientation — орієнтація фотографії. Постав значення horizontal.
-// safesearch — фільтр за віком. Постав значення true.
-// const searchQuery = 'cats';
-// const params = `?key=${API_KEY}&q=${searchQuery}&image_type=photo&orientation"horizontal&safesearch=true"`;
-
-// const options = {
-//   headers: {
-//     API_KEY: '43918725-f2c9edad28ee6306c974c89a7',
-//   },
-// };

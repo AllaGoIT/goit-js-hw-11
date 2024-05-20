@@ -27,9 +27,8 @@ function onSubmit(event) {
     fetchPhotosCats(searchQuery);
   
 };
-const galEl = document.querySelector("ul.gallery");
+  const galEl = document.querySelector("ul.gallery");
   galEl.innerHTML = "";
- 
   lightbox.refresh();
   }
  

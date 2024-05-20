@@ -16,8 +16,8 @@ export const createGalleryList = json => {
         const img = document.createElement("img");
         img.classList.add("gallery-image");
         img.src = item.webformatURL;
-      img.alt = item.tags;
-      img.title = item.likes;
+        img.alt = item.tags;
+        img.title = item.likes;
       
      
         // const h1 = document.createElement("h1");
@@ -58,19 +58,7 @@ export const createGalleryList = json => {
 
 }
 
-// webformatURL — посилання на маленьке зображення для списку карток у галереї
-// largeImageURL — посилання на велике зображення для модального вікна
-// tags — рядок з описом зображення. Підійде для атрибута alt
 // likes — кількість вподобайок
 // views — кількість переглядів
 // comments — кількість коментарів
 // downloads — кількість завантажень
-
-//  return json
-//     .map(
-//       ({ webformatURL,largeImageURL,tags,likes,views,comments,downloads }) => 
-//     <div class="gallery">
-//     <a href="${webformatURL}"><img src="${largeImageURL}" alt="${tags}" title="${comments}"/></a>
-// </div>
-//     )
-// .join('');
