@@ -7,7 +7,7 @@ import{S as m,i as n}from"./assets/vendor-8c59ed88.js";(function(){const o=docum
           alt="${t}"
         />
         <div class="text-list">
-          <p class="text-likes">Likes: ${i}</p> 
+          <p class="text-likes">Likes:${i}</p> 
           <p class="text-views">Views: ${c}</p>
           <p class="text-coments">Comments: ${u}</p>
          <p class="text-downloads">Downloads: ${d}</p>
