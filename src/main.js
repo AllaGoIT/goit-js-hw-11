@@ -10,34 +10,38 @@ const loadEl = document.querySelector(".loader");
 const galEl = document.querySelector("ul.gallery");
 
 
-
 function onSubmit(event) {
   event.preventDefault();
   const searchQuery = event.target.elements[0].value.trim();
   event.target.reset();
   loadEl.style.visibility = "visible";
   loadEl.style.pointerEvents = "all";
+  //const loadEl = document.querySelector(".loader");
+
+
   
   if (searchQuery) {
     fetchPhotosCats(searchQuery).then(json => {
       if (json.total === 0) {
+      loadEl.style.visibility = "hidden";
+      loadEl.style.pointerEvents = "none";
         throw new Error((
           iziToast.show({
-            position: 'topCenter',
+            position: 'topRight',
             message: "Sorry, there are no images matching your search query. Please try again!",
             color: 'red',
             close: true,
           })
-        ));
+        ))
       }
+   
       createGalleryList(json.hits);
-    
+
     })
     .catch(error => {
       console.log(error);
     });
   };
-    galEl.innerHTML = "";
+  galEl.innerHTML = "";
+     
 };
-
- 

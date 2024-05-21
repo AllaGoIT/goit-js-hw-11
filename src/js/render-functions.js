@@ -1,5 +1,4 @@
 
-
 const galEl = document.querySelector("ul.gallery");
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
@@ -34,10 +33,5 @@ export const createGalleryList = images => {
     
     const loadEl = document.querySelector(".loader");
     loadEl.style.visibility = "hidden";
-  loadEl.style.pointerEvents = "none";
-  
-  
-}
-
-
-    
+    loadEl.style.pointerEvents = "none";
+    }
