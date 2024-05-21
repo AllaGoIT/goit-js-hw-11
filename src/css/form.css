@@ -160,17 +160,70 @@ button {
 .text-list {
   display: flex;
   flex-direction: row;
-  gap: 27px;
 }
 
-p {
+.text-likes {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  gap: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #21223b;
+  margin-left: 24px;
+  margin-top: 20px;
+}
+
+.text-views {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  gap: 4px;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.text-coments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 20px;
   width: 72px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 12px;
-  line-height: 1, 33;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-right: 32px;
+}
+
+.text-downloads {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 20px;
+  width: 72px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
