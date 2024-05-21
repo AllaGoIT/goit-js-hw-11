@@ -2,19 +2,14 @@ import "izitoast/dist/css/iziToast.min.css";
 import iziToast from "izitoast";
 import { fetchPhotosCats } from "./js/pixabay-api.js";
 import { createGalleryList } from "./js/render-functions.js";
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+
 
 const formEl = document.querySelector(".form");
 formEl.addEventListener("submit", onSubmit);
 const loadEl = document.querySelector(".loader");
 const galEl = document.querySelector("ul.gallery");
 
-const lightbox = new SimpleLightbox('.gallery a', {
-    captionPosition: 'bottom',
-    captionDelay: 250,
-    captionsData: 'alt',
-});
+
 
 function onSubmit(event) {
   event.preventDefault();
@@ -24,11 +19,23 @@ function onSubmit(event) {
   loadEl.style.pointerEvents = "all";
   
   if (searchQuery) {
-    fetchPhotosCats(searchQuery);
-  
+    fetchPhotosCats(searchQuery).then(json => {
+      if (json.total === 0) {
+        throw new Error((
+          iziToast.show({
+            position: 'topCenter',
+            message: "Sorry, there are no images matching your search query. Please try again!",
+            color: 'red',
+            close: true,
+          })
+        ));
+      }
+      createGalleryList(json.hits);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+      };
 };
-  const galEl = document.querySelector("ul.gallery");
-  galEl.innerHTML = "";
-  lightbox.refresh();
-  }
+
  

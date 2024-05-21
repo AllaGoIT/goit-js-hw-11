@@ -27,23 +27,5 @@ export const fetchPhotosCats = (query = "cat") => {
       ));
     }
     return response.json();
-
   })
-    .then(json => {
-      console.log(json);
-      if (json.total === 0) {
-        throw new Error((
-          iziToast.show({
-            position: 'topCenter',
-            message: "Sorry, there are no images matching your search query. Please try again!",
-            color: 'red',
-            close: true,
-          })
-        ));
-      }
-      createGalleryList(json);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-};
+} 

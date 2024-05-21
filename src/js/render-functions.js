@@ -1,64 +1,41 @@
 
 
 const galEl = document.querySelector("ul.gallery");
-const fragment = document.createDocumentFragment();
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+const lightbox = new SimpleLightbox('.gallery a', {
+    captionPosition: 'bottom',
+    captionDelay: 250,
+    captionsData: 'alt',
+});
 
-export const createGalleryList = json => {
+export const createGalleryList = images => {
+
+    const markUp = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
+     <li class="gallery-item">
+      <a class="gallery-link" href="${largeImageURL}">
+        <img
+          class="gallery-image"
+          src="${webformatURL}"
+          alt="${tags}"
+        />
+        <div class= "text-list">
+          <p>Likes:${likes}</p> 
+          <p>Views:${views}</p>
+          <p>Comments:${comments}</p>
+         <p>Downloads:${downloads}</p>
+        </div>
+      </a>
+    </li>
+    `).join("");
+
+    galEl.insertAdjacentHTML("beforeend", markUp);
+    lightbox.refresh();
     
-    json.hits.forEach(item => {
-        const li = document.createElement("li");
-        li.classList.add("gallery-item");
-
-        const a = document.createElement("a");
-        a.classList.add("gallery-link");
-        a.href = item.largeImageURL;
-
-        const img = document.createElement("img");
-        img.classList.add("gallery-image");
-        img.src = item.webformatURL;
-        img.alt = item.tags;
-        img.title = item.likes;
-      
-     
-        // const h1 = document.createElement("h1");
-        // h1.classList.add("gallery-text1");
-        // h1.href = item.likes;
-       
-        // const h2 = document.createElement("h2");
-        // h2.classList.add("gallery-text2");
-        // h2.href = item.views;
-
-        //   const h3 = document.createElement("h3");
-        // h3.classList.add("gallery-text3");
-        // h3.href = item.comments;
-
-        // const h4 = document.createElement("h4");
-        // h4.classList.add("gallery-text4");
-        // h4.href = item.downloads;
-
-
-        li.appendChild(a);
-        a.appendChild(img);
-        // img.appendChild(h1, h2, h3, h4);
-
-        fragment.appendChild(li);
-    });
-    galEl.appendChild(fragment);
-  
-
+   
     const loadEl = document.querySelector(".loader");
     loadEl.style.visibility = "hidden";
     loadEl.style.pointerEvents = "none";
-      
-    localStorage.removeItem("feedback-form-state");
-    galEl.reset();
-    gallery.innerHTML = "";
-    lightbox.refresh();
-
-
 }
 
-// likes — кількість вподобайок
-// views — кількість переглядів
-// comments — кількість коментарів
-// downloads — кількість завантажень
+    

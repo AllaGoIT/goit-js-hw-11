@@ -156,3 +156,21 @@ button {
   width: 1128px;
   height: 200px;
 }
+
+/* .text-list {
+  display: flex;
+  flex-direction: cp;
+  gap: 27px;
+} */
+
+/* .text-value {
+  display: flex;
+  flex-direction: column;
+  width: 72px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1, 33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+} */
