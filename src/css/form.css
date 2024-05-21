@@ -163,7 +163,7 @@ button {
   gap: 27px;
 }
 
-.text-listl {
+p {
   display: flex;
   flex-direction: column;
   width: 72px;
