@@ -20,7 +20,7 @@ export const createGalleryList = images => {
           alt="${tags}"
         />
         <div class="text-list">
-          <p class="text-likes">Likes: ${likes}</p> 
+          <p class="text-likes">Likes:${likes}</p> 
           <p class="text-views">Views: ${views}</p>
           <p class="text-coments">Comments: ${comments}</p>
          <p class="text-downloads">Downloads: ${downloads}</p>
