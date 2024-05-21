@@ -157,13 +157,13 @@ button {
   height: 200px;
 }
 
-/* .text-list {
+.text-list {
   display: flex;
-  flex-direction: cp;
+  flex-direction: row;
   gap: 27px;
-} */
+}
 
-/* .text-value {
+.text-listl {
   display: flex;
   flex-direction: column;
   width: 72px;
@@ -173,4 +173,4 @@ button {
   line-height: 1, 33;
   letter-spacing: 0.04em;
   color: #2e2f42;
-} */
+}

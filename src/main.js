@@ -31,11 +31,13 @@ function onSubmit(event) {
         ));
       }
       createGalleryList(json.hits);
+    
     })
     .catch(error => {
       console.log(error);
     });
-      };
+  };
+    galEl.innerHTML = "";
 };
 
  

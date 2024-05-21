@@ -20,10 +20,10 @@ export const createGalleryList = images => {
           alt="${tags}"
         />
         <div class= "text-list">
-          <p>Likes:${likes}</p> 
-          <p>Views:${views}</p>
-          <p>Comments:${comments}</p>
-         <p>Downloads:${downloads}</p>
+          <p class = "text-listl">Likes:${likes}</p> 
+          <p class = "text-listl>Views:${views}</p>
+          <p class = "text-listl>Comments:${comments}</p>
+         <p class = "text-listl>Downloads:${downloads}</p>
         </div>
       </a>
     </li>
@@ -32,10 +32,12 @@ export const createGalleryList = images => {
     galEl.insertAdjacentHTML("beforeend", markUp);
     lightbox.refresh();
     
-   
     const loadEl = document.querySelector(".loader");
     loadEl.style.visibility = "hidden";
-    loadEl.style.pointerEvents = "none";
+  loadEl.style.pointerEvents = "none";
+  
+  
 }
+
 
     
